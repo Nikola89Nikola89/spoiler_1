@@ -1,0 +1,9 @@
+$(document).ready(function(){
+    $('.block__tittle').click(function(event){
+        if($('.block').hasClass('one')){
+            $('.block__tittle').not($(this)).removeClass('active');
+            $('.block__text').not($(this).next()).slideUp(300);
+        }
+        $(this).toggleClass('active').next().slideToggle(300);
+    })
+})
